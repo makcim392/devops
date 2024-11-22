@@ -1,0 +1,48 @@
+# Docker
+.docker
+docker-compose.override.yml
+Dockerfile*
+docker-compose*
+
+# Kubernetes
+kubeconfig*
+*.kubeconfig
+.kube/
+kubectl
+*.yaml
+!manifest/*.yaml
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraformrc
+terraform.rc
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Environment variables
+.env
+.env.*
+
+# IDE and System Files
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+node_modules/
+vendor/
+
+# SSH
+.ssh/
+setup_ssh.sh
