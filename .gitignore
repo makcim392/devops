@@ -34,10 +34,21 @@ override.tf.json
 .vscode/
 *.swp
 .DS_Store
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
 # Logs
 *.log
 logs/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
 # Dependencies
 node_modules/
@@ -55,7 +66,11 @@ build/
 *.tsbuildinfo
 next-env.d.ts
 
-# Coverage
+# NestJS
+/dist
+/node_modules
+
+# Coverage & Tests
 coverage/
 .nyc_output
 
@@ -66,3 +81,7 @@ yarn-error.log*
 
 # Local env files
 .env*.local
+
+# Package locks (uncomment if you want to ignore them)
+# yarn.lock
+# package-lock.json
