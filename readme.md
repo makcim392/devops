@@ -179,6 +179,10 @@ docker run -p 3000:3000 -d --network primeiro-network api-rocket:v3
 
 ## More optimizations about containers
 
+### Multi-stage builds
+
+Multi-stage builds are a feature of Docker that allow you to use multiple build stages in a single Dockerfile. This can be useful for reducing the size of your Docker images and improving build times.
+
 # Alpine and Strech
 
 Alpine is a lightweight Linux distribution that is commonly used in Docker containers due to its small size and security features. However, Alpine uses a different C library (musl) than most other Linux distributions, which use glibc. This can cause compatibility issues when running applications that are compiled for glibc on Alpine.
