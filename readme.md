@@ -98,3 +98,41 @@ docker stop <container-id>
 ```bash
 docker history <image-id>
 ```
+
+## Network
+
+### List
+
+```bash
+docker network ls
+```
+
+### Create
+
+```bash
+docker network create <network-name>
+```
+
+### Inspect
+
+```bash
+docker network inspect <network-name>
+```
+
+## Docker Exec
+
+```bash
+docker exec -it <container-id> /bin/bash
+```
+
+# General information about containers
+
+## Volumes
+
+### List
+
+```bash
+docker volume ls
+```
+
+A volume is a persistent data storage area that the container can use to store data. When a container is deleted, the data in the volume is not deleted.
