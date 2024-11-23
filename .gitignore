@@ -85,3 +85,5 @@ yarn-error.log*
 # Package locks (uncomment if you want to ignore them)
 # yarn.lock
 # package-lock.json
+
+.dockerignore

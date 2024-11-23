@@ -58,5 +58,43 @@ docker buildx build --tag api-rocket --load .
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64 -t api-rocket --push .
 ```
+or
+```bash
+docker buildx build --tag api-rocket --load .
+```
 
+## Running the container
 
+```bash
+docker run -p 3000:3000 -d api-rocket
+```
+
+-d - run the container in detached mode (in the background)
+-p 3000:3000 - map port 3000 from the container to port 3000 on the host
+api-rocket - the name of the image to run
+
+# Useful Docker commands
+
+## Logs
+
+```bash
+docker logs <container-id>
+```
+
+## Run a command inside the container
+
+```bash
+docker exec -it <container-id> <command>
+```
+
+## Stop a container
+
+```bash
+docker stop <container-id>
+```
+
+## History
+
+```bash
+docker history <image-id>
+```
