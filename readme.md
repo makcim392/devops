@@ -136,3 +136,29 @@ docker volume ls
 ```
 
 A volume is a persistent data storage area that the container can use to store data. When a container is deleted, the data in the volume is not deleted.
+
+## Creating a volume
+
+```bash
+docker volume create <volume-name>
+```
+
+## Inspecting a volume
+
+```bash
+docker volume inspect <volume-name>
+```
+
+## Running a container with a volume
+
+```bash
+docker run -v <volume-name>:<container-path> <image-name>
+```
+
+#### Example
+
+```bash
+docker run -v primeiro-volume:/usr/src/app -p 3000:3000 -d api-rocket:v3
+```
+
+Volume has to be pointed to the same path as the container path in the dockerfile.
