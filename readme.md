@@ -192,3 +192,40 @@ Strech is a Debian-based Linux distribution that is commonly used in Docker cont
 # Successive versions and their improvement in sizes overtime
 
 ![image sizes have been reduced on each iteration](image.png)
+
+# Database
+
+## MySQL
+
+### Getting the container ready by command line
+
+```bash
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=rocketseat-db -e MYSQL_USER=admin -e MYSQL_PASSWORD=root --name mysql mysql:8
+```
+
+### Troubleshooting issues
+
+In case an error ocurrs when connecting from the app, check user and privilegies.
+
+```bash
+DROP USER IF EXISTS 'admin'@'%';
+CREATE USER 'admin'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';
+FLUSH PRIVILEGES;
+```
+
+# Some useful packages 
+
+## Brew
+
+1. watch
+
+```bash
+brew install watch
+```
+
+Usage: 
+
+```bash
+watch docker ps
+```
