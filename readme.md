@@ -235,3 +235,29 @@ watch docker ps
 ## Multiple containers in different networks
 
 Make sure that if more than one container, they must be in the same network. For that, run ```docker run``` with the --network parameter.
+
+
+# Docker Compose
+
+Docker compose is a tool for defining and running multi-container Docker applications. It allows you to define your application's services, networks, and volumes in a single YAML file, and then spin up your entire application with a single command.
+
+In order to run, execute:
+
+```bash
+docker-compose up
+```
+
+# Race condition
+
+In case the database container goes up first, the app won't be able to connect to it. To solve this, add the following to the app's docker-compose file:
+
+```yaml
+depends_on:
+  - db
+```
+
+Another alternative is 'wait-for-it' package. To use it, add the following to the app's docker-compose file:
+
+```yaml
+command: ["./wait-for-it.sh", "db:3306", "--", "yarn", "dev"]
+```
