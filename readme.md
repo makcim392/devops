@@ -229,3 +229,9 @@ Usage:
 ```bash
 watch docker ps
 ```
+
+# Troubleshooting
+
+## Multiple containers in different networks
+
+Make sure that if more than one container, they must be in the same network. For that, run ```docker run``` with the --network parameter.

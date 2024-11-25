@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import * as mysql2 from 'mysql2';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -7,7 +8,8 @@ import { AppService } from './app.service';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      driver: mysql2,
+      host: 'mysql',
       port: 3306,
       username: 'admin',
       password: 'root',
