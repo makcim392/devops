@@ -189,3 +189,6 @@ Alpine is a lightweight Linux distribution that is commonly used in Docker conta
 
 Strech is a Debian-based Linux distribution that is commonly used in Docker containers. It uses the glibc C library, which is the same as most other Linux distributions, making it more compatible with applications that are compiled for glibc.
 
+# Successive versions and their improvement in sizes overtime
+
+![image sizes have been reduced on each iteration](image.png)
